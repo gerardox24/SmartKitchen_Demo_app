@@ -1,0 +1,10 @@
+{
+    "name": "tensorflows",
+    "version": "1.0.0",
+    "dependencies": {
+        "express": "latest"
+    },
+    "scripts": {
+        "start": "nodemon server.js"
+    }
+}
