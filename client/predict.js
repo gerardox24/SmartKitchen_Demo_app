@@ -21,11 +21,19 @@ function draw() {
     for (let i = 0; i < objects.length; i++) {
         noStroke();
         fill(0, 255, 0);
-        text(objects[i].label, objects[i].x * width, objects[i].y * height - 5);
+        text(objects[i].label, objects[i].x * width, objects[i].y * height + 5);
         noFill();
-        strokeWeight(4);
-        stroke(0, 255, 0);
-        rect(objects[i].x * width, objects[i].y * height, objects[i].w * width, objects[i].h * height);
+        strokeWeight(20);
+        stroke(4, 166, 20);
+
+        var positionX = (objects[i].x * width + (objects[i].w * width) / 2 );
+        var positionY = (objects[i].y * height + (objects[i].h * height) / 2 );
+
+        var donutWidth = (objects[i].w * width);
+        var donutHeight = (objects[i].w * height);
+
+        //rect(objects[i].x * width, objects[i].y * height, objects[i].w * width, objects[i].h * height);
+        ellipse(positionX, positionY, donutWidth, donutHeight);
     }
 }
 
